@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<title>followz-the-cat</title>
+	<link href="game.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+	<!-- <div id="header">followthecat</div> -->
+	<div id="context">
+		<canvas id="layer0"></canvas>
+		<canvas id="layer1"></canvas>
+	</div>
+
+	<div id="loadingScene" class="scene">
+		<div class="scene-content">
+			Loading..
+		</div>
+	</div>
+
+	<div id="errorScene" class="scene hidden">
+		<div class="scene-content">
+			Could not start game, try again later :'(
+		</div>
+	</div>
+
+	<div id="startScene" class="scene hidden">
+		<div id="gameTitle">
+			<h1>FOLLOWZ THE CAT</h1>
+			<h4>JESSICAT PRODUCTIONS 2014</h4>
+		</div>
+		<div class="scene-content">
+			<h1>WELCOMEZ!</h1>
+			<ul>
+				<li><label><input type="radio" name="difficulty" value="easy">EASY</label></li>
+				<li><label><input type="radio" name="difficulty" value="normal" checked>NORMAL</label></li>
+				<li><label><input type="radio" name="difficulty" value="hard">HARD</label></li>
+				<li><label><input type="radio" name="difficulty" value="insane">INSANE</label></li>
+			</ul>
+			<div class="scene-button" onclick="startGame()">START PLAYING</div>		
+		</div>
+	</div>
+
+	<div id="pauseScene" class="scene hidden">
+		<div class="scene-content">
+			<h1>PAUZED!</h1>
+			<div class="scene-button" onclick="resumeGame()">CONTINUE</div>
+			<div class="scene-button" onclick="exitGame()">EXIT</div>
+		</div>
+	</div>
+
+	<div id="gameOverScene" class="scene hidden">
+		<div class="scene-content">
+			<h1>NOOOOOOO!</h1>
+			<div class="scene-button" onclick="restartGame()">TRY AGAIN</div>
+			<div class="scene-button" onclick="exitGame()">EXIT</div>
+		</div>
+	</div>
+
+	<script src="game.js"></script>
+	<script src="lib/fastclick.min.js"></script>
+	<script>FastClick.attach(document.body);</script>
+</div>
+</body>
+</html>
