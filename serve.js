@@ -10,6 +10,4 @@ var server = http.createServer(function(req, res){
   serve(req, res, done)
 });
 
-server.listen(80);
-
-console.log('Listening on port 80.');
+server.listen(process.env.PORT || 8001);
