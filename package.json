@@ -4,6 +4,7 @@
   "description": "An example module to illustrate the usage of a package.json",
   "author": "Your Name <you.name@example.org>",
   "dependencies": {
-	"connect": "*"
+    "finalhandler": "*",
+    "serve-static": "*"
   }
 }
